@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Application de Traduction</title>
+</head>
+<body>
+
+    <div class="container">
+        <textarea id="textInput" placeholder="Saisissez le mot à traduire ici..."></textarea>
+        <div class="buttons">
+            <button onclick="translateText('francais')">
+                <i class="fas fa-language"></i>Traduire en Français
+            </button> &nbsp; &nbsp; &nbsp; &nbsp;
+            <button onclick="translateText('bariba')">
+                <i class="fas fa-language"></i>Traduire en bariba
+            </button>
+            <div id="resultContainer"><textarea id="resultText" readonly placeholder="Résultat de la traduction"></textarea></div>
+        </div>
+
+        <div class="separator"></div>
+        <h2 class="section-title">Section d'enregistrement d'audios</h2>
+        <p class="instruction">Appuyer sur le bouton Parler pour commencer à enregistrer vos audios<br>  Le bouton Arrêter permet de mettre fin à l'enregistrement. <br>
+            Vous pouvez lire les phrases ci-dessous pour enregistrer vos audios<br>
+              
+        </p>
+        <br>
+        <textarea id="exampleText" readonly>Vous pouvez utiliser les textes qui s'afficheront ici pour enregistrer vos audios</textarea>
+        <button onclick="startRecording()">
+            <i class="fas fa-microphone"></i>Parler
+        </button>
+        <button onclick="stopRecording()">
+            <i class="fas fa-stop-circle"></i>Arrêter
+        </button>&nbsp; &nbsp; &nbsp; 
+        <button id="playButton" onclick="playAudio()">
+            <i class="fas fa-play-circle"></i>Ecouter
+        </button>  
+
+        <button id="nextButton" onclick="showNextExample()">
+            <i class="fas fa-arrow-right"></i>Suivant
+        </button> <br><br> <br><br>
+        
+        <button id="submit-section" onclick="validate()">
+            <i class="fas fa-check-circle"></i>Valider
+        </button>
+        
+        
+            
+    <script src="script.js"></script>
+</body>
+</html>
